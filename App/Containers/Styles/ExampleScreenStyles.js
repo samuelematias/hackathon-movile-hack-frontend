@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { Metrics, ApplicationStyles, Fonts, Colors } from '../../Themes';
+import { Metrics, ApplicationStyles, CustomFonts, Colors } from '../../Themes';
 
 export default StyleSheet.create({
 	...ApplicationStyles.screen,
@@ -39,7 +39,7 @@ export default StyleSheet.create({
 		color: '#fff'
 	},
 	sectionTitleStyle: {
-		...Fonts.style.h1,
+		...CustomFonts.style.h1,
 		color: Colors.grayAccent,
 		textAlign: 'center'
 	},

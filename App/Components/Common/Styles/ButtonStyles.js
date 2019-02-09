@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { ApplicationStyles, Metrics, Colors, Fonts } from '../../../Themes';
+import { ApplicationStyles, Metrics, Colors, CustomFonts } from '../../../Themes';
 
 export default StyleSheet.create({
 	squareButton: {
@@ -37,7 +37,7 @@ export default StyleSheet.create({
 		marginVertical: Metrics.marginVertical
 	},
 	buttonLabel: {
-		...Fonts.style.h2,
+		...CustomFonts.style.h2,
 		color: Colors.background,
 		opacity: 0.9
 	},
@@ -54,7 +54,7 @@ export default StyleSheet.create({
 		marginVertical: Metrics.marginVertical
 	},
 	buttonLabelDisabled: {
-		...Fonts.style.h2,
+		...CustomFonts.style.h2,
 		color: Colors.secondaryBase
 	}
 });

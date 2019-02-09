@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native'
-import {Fonts, Metrics, Colors} from '../../Themes/'
+import {CustomFonts, Metrics, Colors} from '../../Themes/'
 
 export default StyleSheet.create({
   applicationView: {
@@ -13,7 +13,7 @@ export default StyleSheet.create({
   welcome: {
     fontSize: 20,
     textAlign: 'center',
-    fontFamily: Fonts.type.base,
+    fontFamily: CustomFonts.type.base,
     margin: Metrics.baseMargin
   },
   myImage: {

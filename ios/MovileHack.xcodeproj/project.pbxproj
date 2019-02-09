@@ -44,6 +44,16 @@
 		3501C14101084AE1BEA86455 /* libRNI18n-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1BB7EC313B416EA214CE7C /* libRNI18n-tvOS.a */; };
 		1597218802154C4EA429845D /* libReactNativeCameraKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A0B41C83934AAEB5597F06 /* libReactNativeCameraKit.a */; };
 		9F30C9D0EB6E49A4B677E4AD /* libReactNativePermissions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FF40FA6F144C1C8CB0EB4F /* libReactNativePermissions.a */; };
+		DA1403B9A8AB4C4C970B8DEB /* AvenirLTStd-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0EB8B3A83A15480B8A4CB788 /* AvenirLTStd-Black.otf */; };
+		CE7DD459B5A94D3FAABC3A7D /* AvenirLTStd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = CD7E69AECC7E42599C319755 /* AvenirLTStd-Book.otf */; };
+		4C8D4094F7964047888D85E9 /* AvenirLTStd-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A32E30D3A7B4E7395CE753E /* AvenirLTStd-Heavy.ttf */; };
+		79AB3E0C0843463D91E25B85 /* AvenirLTStd-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F0560FC467E48E0955647D0 /* AvenirLTStd-Light.otf */; };
+		932555180B624A88A012A9DC /* AvenirLTStd-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 225A9B357430427BBF6CC108 /* AvenirLTStd-Medium.ttf */; };
+		4B910C18B83D498D8B2308FD /* AvenirLTStd-Roman.otf in Resources */ = {isa = PBXBuildFile; fileRef = 63834794FF9E4EE58F0FE1AC /* AvenirLTStd-Roman.otf */; };
+		9A04D2681AE14192896DA347 /* CircularStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3C695F1BE3A6417B9E9E3C2F /* CircularStd-Bold.otf */; };
+		937F1297552D4FAFAAB58F6F /* CircularStd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7DEC399C3B8A4C35B4DCE9E7 /* CircularStd-Book.otf */; };
+		3CB737669CC24E9193A2BA3C /* CircularStd-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC3FBEBBBB064CADBC6E17B0 /* CircularStd-Medium.otf */; };
+		F4A99C00E44B4596BAC3715E /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC01D32AD9364691A6390498 /* ProximaNova-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -360,6 +370,16 @@
 		A2A0B41C83934AAEB5597F06 /* libReactNativeCameraKit.a */ = {isa = PBXFileReference; name = "libReactNativeCameraKit.a"; path = "libReactNativeCameraKit.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		9FC8A23E3E984A43B9774ABF /* ReactNativePermissions.xcodeproj */ = {isa = PBXFileReference; name = "ReactNativePermissions.xcodeproj"; path = "../node_modules/react-native-permissions/ios/ReactNativePermissions.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		D5FF40FA6F144C1C8CB0EB4F /* libReactNativePermissions.a */ = {isa = PBXFileReference; name = "libReactNativePermissions.a"; path = "libReactNativePermissions.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		0EB8B3A83A15480B8A4CB788 /* AvenirLTStd-Black.otf */ = {isa = PBXFileReference; name = "AvenirLTStd-Black.otf"; path = "../assets/fonts/AvenirLTStd-Black.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CD7E69AECC7E42599C319755 /* AvenirLTStd-Book.otf */ = {isa = PBXFileReference; name = "AvenirLTStd-Book.otf"; path = "../assets/fonts/AvenirLTStd-Book.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3A32E30D3A7B4E7395CE753E /* AvenirLTStd-Heavy.ttf */ = {isa = PBXFileReference; name = "AvenirLTStd-Heavy.ttf"; path = "../assets/fonts/AvenirLTStd-Heavy.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2F0560FC467E48E0955647D0 /* AvenirLTStd-Light.otf */ = {isa = PBXFileReference; name = "AvenirLTStd-Light.otf"; path = "../assets/fonts/AvenirLTStd-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		225A9B357430427BBF6CC108 /* AvenirLTStd-Medium.ttf */ = {isa = PBXFileReference; name = "AvenirLTStd-Medium.ttf"; path = "../assets/fonts/AvenirLTStd-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		63834794FF9E4EE58F0FE1AC /* AvenirLTStd-Roman.otf */ = {isa = PBXFileReference; name = "AvenirLTStd-Roman.otf"; path = "../assets/fonts/AvenirLTStd-Roman.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3C695F1BE3A6417B9E9E3C2F /* CircularStd-Bold.otf */ = {isa = PBXFileReference; name = "CircularStd-Bold.otf"; path = "../assets/fonts/CircularStd-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7DEC399C3B8A4C35B4DCE9E7 /* CircularStd-Book.otf */ = {isa = PBXFileReference; name = "CircularStd-Book.otf"; path = "../assets/fonts/CircularStd-Book.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AC3FBEBBBB064CADBC6E17B0 /* CircularStd-Medium.otf */ = {isa = PBXFileReference; name = "CircularStd-Medium.otf"; path = "../assets/fonts/CircularStd-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EC01D32AD9364691A6390498 /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; name = "ProximaNova-Regular.otf"; path = "../assets/fonts/ProximaNova-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -607,6 +627,7 @@
 				00E356EF1AD99517003FC87E /* MovileHackTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				6DFA054E064A4B74A3DED731 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -632,6 +653,24 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		6DFA054E064A4B74A3DED731 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				0EB8B3A83A15480B8A4CB788 /* AvenirLTStd-Black.otf */,
+				CD7E69AECC7E42599C319755 /* AvenirLTStd-Book.otf */,
+				3A32E30D3A7B4E7395CE753E /* AvenirLTStd-Heavy.ttf */,
+				2F0560FC467E48E0955647D0 /* AvenirLTStd-Light.otf */,
+				225A9B357430427BBF6CC108 /* AvenirLTStd-Medium.ttf */,
+				63834794FF9E4EE58F0FE1AC /* AvenirLTStd-Roman.otf */,
+				3C695F1BE3A6417B9E9E3C2F /* CircularStd-Bold.otf */,
+				7DEC399C3B8A4C35B4DCE9E7 /* CircularStd-Book.otf */,
+				AC3FBEBBBB064CADBC6E17B0 /* CircularStd-Medium.otf */,
+				EC01D32AD9364691A6390498 /* ProximaNova-Regular.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -1079,6 +1118,16 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				DA1403B9A8AB4C4C970B8DEB /* AvenirLTStd-Black.otf in Resources */,
+				CE7DD459B5A94D3FAABC3A7D /* AvenirLTStd-Book.otf in Resources */,
+				4C8D4094F7964047888D85E9 /* AvenirLTStd-Heavy.ttf in Resources */,
+				79AB3E0C0843463D91E25B85 /* AvenirLTStd-Light.otf in Resources */,
+				932555180B624A88A012A9DC /* AvenirLTStd-Medium.ttf in Resources */,
+				4B910C18B83D498D8B2308FD /* AvenirLTStd-Roman.otf in Resources */,
+				9A04D2681AE14192896DA347 /* CircularStd-Bold.otf in Resources */,
+				937F1297552D4FAFAAB58F6F /* CircularStd-Book.otf in Resources */,
+				3CB737669CC24E9193A2BA3C /* CircularStd-Medium.otf in Resources */,
+				F4A99C00E44B4596BAC3715E /* ProximaNova-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

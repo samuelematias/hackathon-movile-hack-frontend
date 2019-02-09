@@ -1,7 +1,7 @@
 ### Themes Folder
 Application specific themes
 * Base Styles
-* Fonts
+* CustomFonts
 * Metrics
 * Colors
 

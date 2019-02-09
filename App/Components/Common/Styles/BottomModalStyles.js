@@ -1,5 +1,5 @@
 import { StyleSheet, Platform } from 'react-native';
-import { Fonts, Colors, Metrics } from '../../../Themes';
+import { CustomFonts, Colors, Metrics } from '../../../Themes';
 
 export default StyleSheet.create({
 	containerModalStyle: {
@@ -63,13 +63,13 @@ export default StyleSheet.create({
 		marginBottom: 16
 	},
 	bottomModalTitle: {
-		fontFamily: Fonts.type.latoRegular,
+		fontFamily: CustomFonts.type.latoRegular,
 		fontWeight: '700',
 		fontSize: 16,
 		color: Colors.standartText
 	},
 	bottomModalText: {
-		fontFamily: Fonts.type.latoRegular,
+		fontFamily: CustomFonts.type.latoRegular,
 		fontWeight: '400',
 		fontSize: 16,
 		color: Colors.standartText

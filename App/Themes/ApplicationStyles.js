@@ -1,4 +1,4 @@
-import Fonts from './Fonts';
+import CustomFonts from './CustomFonts';
 import Metrics from './Metrics';
 import Colors from './Colors';
 
@@ -28,7 +28,7 @@ const ApplicationStyles = {
 			padding: Metrics.baseMargin
 		},
 		sectionText: {
-			...Fonts.style.normal,
+			...CustomFonts.style.normal,
 			paddingVertical: Metrics.doubleBaseMargin,
 			color: Colors.snow,
 			marginVertical: Metrics.smallMargin,
@@ -41,7 +41,7 @@ const ApplicationStyles = {
 			marginHorizontal: Metrics.smallMargin
 		},
 		titleText: {
-			...Fonts.style.h2,
+			...CustomFonts.style.h2,
 			fontSize: 14,
 			color: Colors.text
 		}
@@ -54,7 +54,7 @@ const ApplicationStyles = {
 		marginBottom: Metrics.baseMargin
 	},
 	darkLabel: {
-		fontFamily: Fonts.type.bold,
+		fontFamily: CustomFonts.type.bold,
 		color: Colors.snow
 	},
 	groupContainer: {
@@ -64,7 +64,7 @@ const ApplicationStyles = {
 		alignItems: 'center'
 	},
 	sectionTitle: {
-		...Fonts.style.h4,
+		...CustomFonts.style.h4,
 		color: Colors.coal,
 		backgroundColor: Colors.ricePaper,
 		padding: Metrics.smallMargin,
