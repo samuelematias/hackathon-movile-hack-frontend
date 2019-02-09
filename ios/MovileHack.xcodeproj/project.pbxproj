@@ -43,6 +43,7 @@
 		5BB24B095F154809BC93952C /* libRNI18n.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9540444186946FF9AFB8CA3 /* libRNI18n.a */; };
 		3501C14101084AE1BEA86455 /* libRNI18n-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1BB7EC313B416EA214CE7C /* libRNI18n-tvOS.a */; };
 		1597218802154C4EA429845D /* libReactNativeCameraKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A0B41C83934AAEB5597F06 /* libReactNativeCameraKit.a */; };
+		9F30C9D0EB6E49A4B677E4AD /* libReactNativePermissions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FF40FA6F144C1C8CB0EB4F /* libReactNativePermissions.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -357,6 +358,8 @@
 		1D1BB7EC313B416EA214CE7C /* libRNI18n-tvOS.a */ = {isa = PBXFileReference; name = "libRNI18n-tvOS.a"; path = "libRNI18n-tvOS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		65098323FA43459A89370BFF /* ReactNativeCameraKit.xcodeproj */ = {isa = PBXFileReference; name = "ReactNativeCameraKit.xcodeproj"; path = "../node_modules/react-native-camera-kit/ios/lib/ReactNativeCameraKit.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		A2A0B41C83934AAEB5597F06 /* libReactNativeCameraKit.a */ = {isa = PBXFileReference; name = "libReactNativeCameraKit.a"; path = "libReactNativeCameraKit.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		9FC8A23E3E984A43B9774ABF /* ReactNativePermissions.xcodeproj */ = {isa = PBXFileReference; name = "ReactNativePermissions.xcodeproj"; path = "../node_modules/react-native-permissions/ios/ReactNativePermissions.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		D5FF40FA6F144C1C8CB0EB4F /* libReactNativePermissions.a */ = {isa = PBXFileReference; name = "libReactNativePermissions.a"; path = "libReactNativePermissions.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -388,6 +391,7 @@
 				FAA49D98FD7E46E9A7685E93 /* libRNGestureHandler.a in Frameworks */,
 				5BB24B095F154809BC93952C /* libRNI18n.a in Frameworks */,
 				1597218802154C4EA429845D /* libReactNativeCameraKit.a in Frameworks */,
+				9F30C9D0EB6E49A4B677E4AD /* libReactNativePermissions.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,6 +585,7 @@
 				5E4623C3C2B74B73AF6BFD9B /* RNGestureHandler.xcodeproj */,
 				6BB6DF2D934244A89EA6C90C /* RNI18n.xcodeproj */,
 				65098323FA43459A89370BFF /* ReactNativeCameraKit.xcodeproj */,
+				9FC8A23E3E984A43B9774ABF /* ReactNativePermissions.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1212,12 +1217,14 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
 					"$(SRCROOT)/../node_modules/react-native-camera-kit/ios/lib/ReactNativeCameraKit",
+					"$(SRCROOT)/../node_modules/react-native-permissions/ios/**",
 				);
 			};
 			name = Debug;
@@ -1243,12 +1250,14 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
 					"$(SRCROOT)/../node_modules/react-native-camera-kit/ios/lib/ReactNativeCameraKit",
+					"$(SRCROOT)/../node_modules/react-native-permissions/ios/**",
 				);
 			};
 			name = Release;
@@ -1274,6 +1283,7 @@
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
 					"$(SRCROOT)/../node_modules/react-native-camera-kit/ios/lib/ReactNativeCameraKit",
+					"$(SRCROOT)/../node_modules/react-native-permissions/ios/**",
 				);
 			};
 			name = Debug;
@@ -1298,6 +1308,7 @@
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
 					"$(SRCROOT)/../node_modules/react-native-camera-kit/ios/lib/ReactNativeCameraKit",
+					"$(SRCROOT)/../node_modules/react-native-permissions/ios/**",
 				);
 			};
 			name = Release;
@@ -1331,12 +1342,14 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
 					"$(SRCROOT)/../node_modules/react-native-camera-kit/ios/lib/ReactNativeCameraKit",
+					"$(SRCROOT)/../node_modules/react-native-permissions/ios/**",
 				);
 			};
 			name = Debug;
@@ -1370,12 +1383,14 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
 					"$(SRCROOT)/../node_modules/react-native-camera-kit/ios/lib/ReactNativeCameraKit",
+					"$(SRCROOT)/../node_modules/react-native-permissions/ios/**",
 				);
 			};
 			name = Release;
@@ -1408,12 +1423,14 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
 					"$(SRCROOT)/../node_modules/react-native-camera-kit/ios/lib/ReactNativeCameraKit",
+					"$(SRCROOT)/../node_modules/react-native-permissions/ios/**",
 				);
 			};
 			name = Debug;
@@ -1446,12 +1463,14 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
 					"$(SRCROOT)/../node_modules/react-native-camera-kit/ios/lib/ReactNativeCameraKit",
+					"$(SRCROOT)/../node_modules/react-native-permissions/ios/**",
 				);
 			};
 			name = Release;

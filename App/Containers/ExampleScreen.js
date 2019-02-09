@@ -6,6 +6,7 @@ import {
 	View,
 	PermissionsAndroid
 } from 'react-native';
+import Permissions from 'react-native-permissions';
 import { Images } from '../Themes';
 import {
 	Button,
@@ -70,7 +71,19 @@ class ExampleScreen extends Component {
 	}
 
 	componentDidMount() {
-		this.requestCameraPermission();
+		// this.requestCameraPermission();
+
+		// example
+		Permissions.request('camera', {
+			rationale: {
+				title: 'Cool Photo App Camera Permission',
+				message:
+					'Cool Photo App needs access to your camera ' +
+					'so you can take awesome pictures.'
+			}
+		}).then(response => {
+			this.setState({ cameraPermission: response });
+		});
 	}
 
 	requestCameraPermission = async () => {
