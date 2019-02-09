@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
-import { ScrollView, Text, Image, View } from 'react-native';
+import {
+	ScrollView,
+	Text,
+	Image,
+	View,
+	PermissionsAndroid
+} from 'react-native';
 import { Images } from '../Themes';
 import {
 	Button,
@@ -62,6 +68,34 @@ class ExampleScreen extends Component {
 			showSpinner: false
 		};
 	}
+
+	componentDidMount() {
+		this.requestCameraPermission();
+	}
+
+	requestCameraPermission = async () => {
+		try {
+			const granted = await PermissionsAndroid.request(
+				PermissionsAndroid.PERMISSIONS.CAMERA,
+				{
+					title: 'Cool Photo App Camera Permission',
+					message:
+						'Cool Photo App needs access to your camera ' +
+						'so you can take awesome pictures.',
+					buttonNeutral: 'Ask Me Later',
+					buttonNegative: 'Cancel',
+					buttonPositive: 'OK'
+				}
+			);
+			if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+				console.log('You can use the camera');
+			} else {
+				console.log('Camera permission denied');
+			}
+		} catch (err) {
+			console.warn(err);
+		}
+	};
 
 	/**
 	 * Handle to setState on openBottomModal state (to open the modal).
