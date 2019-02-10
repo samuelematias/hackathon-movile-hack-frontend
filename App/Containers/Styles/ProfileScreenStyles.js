@@ -1,5 +1,5 @@
 import { StyleSheet, Platform } from 'react-native';
-import { Metrics, ApplicationStyles, Colors } from '../../Themes/';
+import { Metrics, ApplicationStyles, Fonts, Colors } from '../../Themes/';
 
 export default StyleSheet.create({
 	...ApplicationStyles.screen,
@@ -29,14 +29,12 @@ export default StyleSheet.create({
 		// backgroundColor: 'red'
 	},
 	nameContent: {
-		fontSize: 28,
-		color: '#696969',
-		fontWeight: '600'
+		...Fonts.style.nameContent,
+		color: Colors.skinBlack
 	},
-	emailContent: {
-		fontSize: 16,
-		color: '#696969',
-		marginTop: 10
+	aboutContent: {
+		...Fonts.style.aboutContent,
+		color: Colors.lightBlack
 	},
 	logoutContent: {
 		alignItems: 'center',
@@ -62,14 +60,15 @@ export default StyleSheet.create({
 		borderColor: '#4993d6',
 		borderWidth: 2
 	},
-	labelButtonStyle: {
-		color: '#464646'
-	},
 	label: {
 		textAlign: 'center',
 		fontSize: 10
 	},
 	wrapperTabBarLabel: {
 		marginTop: Platform.OS === 'ios' ? 15 : 0
+	},
+	labelButtonStyle: {
+		...Fonts.style.labelButtonStyle,
+		color: Colors.lightBlack
 	}
 });

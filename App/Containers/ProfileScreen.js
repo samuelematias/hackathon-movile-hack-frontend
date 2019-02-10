@@ -88,9 +88,9 @@ class ProfileScreen extends Component {
 					<Image source={{ uri: user.photo }} style={styles.avatarContent} />
 					<View style={styles.bodyContent}>
 						<Text style={styles.nameContent}>{user.name}</Text>
-						<Text style={styles.emailContent}>{user.email}</Text>
-						<Text style={styles.emailContent}>{user.phone}</Text>
-						<Text style={styles.emailContent}>{user.address}</Text>
+						<Text style={styles.aboutContent}>{user.email}</Text>
+						<Text style={styles.aboutContent}>{user.phone}</Text>
+						<Text style={styles.aboutContent}>{user.address}</Text>
 						<View style={styles.logoutContent}>
 							<Button
 								labelButton={'Logout'}
