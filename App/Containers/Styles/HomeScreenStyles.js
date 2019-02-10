@@ -33,5 +33,30 @@ export default StyleSheet.create({
 		...HomeScreenMetrics.wrapperWallet,
 		position: 'absolute',
 		right: 0
+	},
+	wrapperButton: {
+		...HomeScreenMetrics.wrapperButton
+	},
+	buttonStyle: {
+		...HomeScreenMetrics.buttonStyle,
+		backgroundColor: Colors.white,
+		borderColor: Colors.skinBlue,
+		alignItems: 'center',
+		justifyContent: 'center'
+	},
+	labelButtonStyle: {
+		...Fonts.style.labelButtonStyle,
+		color: Colors.lightBlack
+	},
+	iconMoney: {
+		...HomeScreenMetrics.iconMoney
+	},
+	wrapperLabel: {
+		flexDirection: 'row',
+		alignItems: 'center',
+		justifyContent: 'center'
+	},
+	wrapperIcon: {
+		...HomeScreenMetrics.wrapperIcon
 	}
 });

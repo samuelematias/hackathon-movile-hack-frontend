@@ -63,7 +63,8 @@ const colors = {
 	blackout: '#000000',
 	skinBlack: '#2C3539',
 	skinBlue: '#4993d6',
-	darkBlue: '#07549a'
+	darkBlue: '#07549a',
+	lightBlack: '#464646'
 	// deepSkyBlue: '#007aff'
 };
 

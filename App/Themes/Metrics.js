@@ -225,7 +225,24 @@ const metrics = {
 			width: size(100),
 			height: size(100)
 		},
-		wrapperWallet: {}
+		wrapperWallet: {},
+		wrapperButton: {
+			marginTop: size(20)
+		},
+		buttonStyle: {
+			height: size(60),
+			borderWidth: size(2),
+			borderRadius: size(5),
+			marginRight: size(15),
+			marginLeft: size(15)
+		},
+		iconMoney: {
+			height: size(35),
+			width: size(35)
+		},
+		wrapperIcon: {
+			marginRight: size(20)
+		}
 	}
 };
 

@@ -257,6 +257,10 @@ const style = {
 	moneyTextStyle: {
 		fontFamily: type.avenir.book,
 		fontSize: size.h5
+	},
+	labelButtonStyle: {
+		fontFamily: type.avenir.medium,
+		fontSize: size.small
 	}
 };
 

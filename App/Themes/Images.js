@@ -32,7 +32,8 @@ const images = {
 	iconMasterCard: require('../Images/Icons/icon-mastercard.png'),
 	logo: require('../Images/react-redux-firebase-render.png'),
 	logoVendor: require('../Images/logo-vendedor.png'),
-	logoClient: require('../Images/logo-cliente.png')
+	logoClient: require('../Images/logo-cliente.png'),
+	iconMoney: require('../Images/Icons/icon-money.png')
 };
 
 export default images;

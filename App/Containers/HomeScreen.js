@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { ScrollView, Text, Image, View, Platform } from 'react-native';
+import { TouchableOpacity, Text, Image, View, Platform } from 'react-native';
 import { Images, Colors } from '../Themes';
+
+import { Button } from '../Components/Common/';
 
 // Styles
 import styles from './Styles/HomeScreenStyles';
@@ -71,6 +73,20 @@ class HomeScreen extends Component {
 							/>
 						</View>
 					</View>
+				</View>
+				<View style={styles.wrapperButton}>
+					<TouchableOpacity style={styles.buttonStyle}>
+						<View style={styles.wrapperLabel}>
+							<View style={styles.wrapperIcon}>
+								<Image
+									source={Images.iconMoney}
+									style={styles.iconMoney}
+									resizeMode="stretch"
+								/>
+							</View>
+							<Text style={styles.labelButtonStyle}>{'Adicionar valor'}</Text>
+						</View>
+					</TouchableOpacity>
 				</View>
 			</View>
 		);
