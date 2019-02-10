@@ -62,7 +62,9 @@ class ProfileScreen extends Component {
 		const user = {
 			name: 'Pedro Neto',
 			email: 'pedro.neto@email.com',
-			photo: 'https://img.icons8.com/color/1600/engineer.png'
+			photo: 'https://img.icons8.com/color/1600/engineer.png',
+			address: 'Rua Arnaldo Bastos, Madalena, Recife',
+			phone: '(81) 99810-7649'
 		};
 		this.setState({ user });
 	}
@@ -74,23 +76,26 @@ class ProfileScreen extends Component {
 		const { user } = this.state;
 		return (
 			<View style={styles.mainContainer}>
-				<ScrollView style={styles.container}>
+				<View style={styles.container}>
 					<View style={styles.header} />
 					<Image source={{ uri: user.photo }} style={styles.avatarContent} />
 					<View style={styles.bodyContent}>
 						<Text style={styles.nameContent}>{user.name}</Text>
 						<Text style={styles.emailContent}>{user.email}</Text>
-						<View style={styles.logoutContent}>
-							<Button
-								labelButton={'Logout'}
-								buttonStyle={styles.actionButtonStyle}
-								onPress={() => {
-									navigation.navigate('Login');
-								}}
-							/>
-						</View>
+						<Text style={styles.emailContent}>{user.phone}</Text>
+						<Text style={styles.emailContent}>{user.address}</Text>
 					</View>
-				</ScrollView>
+					<View style={styles.logoutContent}>
+						<Button
+							labelButton={'Logout'}
+							labelButtonStyle={styles.labelButtonStyle}
+							buttonStyle={styles.actionButtonStyle}
+							onPress={() => {
+								navigation.navigate('Login');
+							}}
+						/>
+					</View>
+				</View>
 			</View>
 		);
 	}

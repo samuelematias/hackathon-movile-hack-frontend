@@ -15,17 +15,17 @@ export default StyleSheet.create({
 		marginBottom: 10,
 		alignSelf: 'center',
 		position: 'absolute',
-		marginTop: 130
+		marginTop: 90
 	},
 	header: {
-		backgroundColor: Colors.orangeAccent,
-		height: 200
+		backgroundColor: '#4993d6',
+		height: 250
 	},
 	bodyContent: {
 		flex: 1,
-		alignItems: 'center',
-		padding: 30,
-		marginTop: 80
+		alignItems: 'flex-start',
+		padding: 20,
+		marginTop: 10
 	},
 	nameContent: {
 		fontSize: 28,
@@ -38,7 +38,8 @@ export default StyleSheet.create({
 		marginTop: 10
 	},
 	logoutContent: {
-		marginTop: 50
+		alignItems: 'center',
+		marginTop: 120
 	},
 	centered: {
 		alignItems: 'center'
@@ -56,7 +57,12 @@ export default StyleSheet.create({
 	},
 	actionButtonStyle: {
 		borderRadius: 5,
-		backgroundColor: Colors.orangeAccent
+		backgroundColor: '#fff',
+		borderColor: '#4993d6',
+		borderWidth: 2
+	},
+	labelButtonStyle: {
+		color: '#464646'
 	},
 	label: {
 		textAlign: 'center',
