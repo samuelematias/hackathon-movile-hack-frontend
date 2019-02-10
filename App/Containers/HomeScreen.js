@@ -9,11 +9,9 @@ import {
 } from 'react-native';
 import { Images, Colors } from '../Themes';
 
-import { Button } from '../Components/Common/';
-
 // Styles
 import styles from './Styles/HomeScreenStyles';
-
+import { StatusBarColor, Button } from '../Components/Common';
 class HomeScreen extends Component {
 	static navigationOptions = ({ navigation }) => ({
 		header: null,
@@ -55,7 +53,34 @@ class HomeScreen extends Component {
 	constructor(props) {
 		super(props);
 
-		this.state = {};
+		this.state = {
+			minhasCompras: []
+		};
+	}
+
+	componentDidMount() {
+		const minhasCompras = [
+			{
+				id: '1',
+				date: '08/02/2019',
+				seller: 'Bença Lanches',
+				value: 'R$ 20,00'
+			},
+			{
+				id: '2',
+				date: '08/02/2019',
+				seller: 'Bença Lanches',
+				value: 'R$ 20,00'
+			},
+			{
+				id: '3',
+				date: '08/02/2019',
+				seller: 'Bença Lanches',
+				value: 'R$ 20,00'
+			}
+		];
+
+		this.setState({ minhasCompras: minhasCompras });
 	}
 
 	_renderList = () => {

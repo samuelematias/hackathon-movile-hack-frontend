@@ -7,7 +7,6 @@ import { Colors } from '../Themes';
 
 import LaunchScreen from '../Containers/LaunchScreen';
 import ExampleScreen from '../Containers/ExampleScreen';
-import AboutScreen from '../Containers/AboutScreen';
 import WelcomeScreen from '../Containers/WelcomeScreen';
 import InputScreen from '../Containers/InputScreen';
 
