@@ -7,7 +7,7 @@ import { Colors } from '../Themes';
 
 import LaunchScreen from '../Containers/LaunchScreen';
 import ExampleScreen from '../Containers/ExampleScreen';
-import AboutScreen from '../Containers/AboutScreen';
+import ProfileScreen from '../Containers/ProfileScreen';
 import WelcomeScreen from '../Containers/WelcomeScreen';
 import InputScreen from '../Containers/InputScreen';
 
@@ -19,8 +19,8 @@ const TabNav = TabNavigator(
 		ExampleScreenTab: {
 			screen: ExampleScreen
 		},
-		AboutScreenTab: {
-			screen: AboutScreen
+		ProfileScreenTab: {
+			screen: ProfileScreen
 		}
 	},
 	{
