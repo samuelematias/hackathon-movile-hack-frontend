@@ -52,6 +52,7 @@ class Login extends Component {
 
 	render() {
 		const { hide } = this.state;
+		const { navigation } = this.props;
 		return (
 			<KeyboardAvoidingView behavior="padding" style={styles.container}>
 				{!hide ? (
@@ -65,7 +66,7 @@ class Login extends Component {
 				) : null}
 
 				<View>
-					<LoginForm />
+					<LoginForm navigation={navigation} />
 				</View>
 			</KeyboardAvoidingView>
 		);

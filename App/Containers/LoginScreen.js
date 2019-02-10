@@ -17,7 +17,8 @@ class LoginScreen extends Component {
 	}
 
 	render() {
-		return <Login />;
+		const { navigation } = this.props;
+		return <Login navigation={navigation} />;
 	}
 }
 

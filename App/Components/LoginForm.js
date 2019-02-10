@@ -91,6 +91,7 @@ class LoginForm extends Component {
 
 	render() {
 		const { marginVertical, email, password, visible } = this.state;
+		const { navigation } = this.props;
 		return (
 			<KeyboardAvoidingView>
 				<View style={styles.container}>
@@ -135,7 +136,10 @@ class LoginForm extends Component {
 
 					<TouchableOpacity
 						style={[styles.buttonContainer, { marginVertical: marginVertical }]}
-						onPress={() => {}}
+						onPress={() => {
+							Keyboard.dismiss();
+							return navigation.navigate('HomeScreenTab');
+						}}
 					>
 						<Text style={styles.buttonText}>{'Login'.toUpperCase()}</Text>
 					</TouchableOpacity>
