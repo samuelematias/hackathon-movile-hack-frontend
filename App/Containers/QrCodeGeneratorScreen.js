@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import { Images, Colors } from '../Themes';
 import { Button, FullModal } from '../Components/Common/';
+import axios from 'axios';
 
 // Styles
 import styles from './Styles/QrCodeGeneratorScreenStyles';
@@ -56,12 +57,46 @@ class QrCodeGeneratorScreen extends Component {
 
 		this.state = {
 			QRCodeValue: '',
-			openFullModal: false
+			openFullModal: false,
+			QRCode: {}
 		};
 	}
 
 	_onChangeText = text => {
 		this.setState({ QRCodeValue: text });
+	};
+
+	_generateQRCode = value => {
+		const currentUser = {
+			id: '1',
+			name: 'Pedro Neto',
+			email: 'pedro.neto@email.com',
+			photo: 'https://img.icons8.com/color/1600/engineer.png',
+			address: 'Rua Arnaldo Bastos, Madalena, Recife',
+			phone: '(81) 99810-7649',
+			user_wallet: '1'
+		};
+
+		const sendData = {
+			user_wallet: currentUser.user_wallet,
+			value: value
+		};
+
+		axios
+			.post(
+				'http://ec2-3-90-10-228.compute-1.amazonaws.com:8000/codes/',
+				sendData
+			)
+			.then(res => {
+				this.setState({
+					QRCode: res.data
+				});
+			})
+			.catch(error => {
+				console.log('ERRO');
+			});
+
+		this._handleOpenFullModal();
 	};
 
 	_handleOpenFullModal = () => {
@@ -79,8 +114,7 @@ class QrCodeGeneratorScreen extends Component {
 					<Image
 						style={{ width: 200, height: 200 }}
 						source={{
-							uri:
-								'http://ec2-3-90-10-228.compute-1.amazonaws.com:8000/media/4febddff762e46f79ec575f89869af64.png'
+							uri: this.state.QRCode.filepath
 						}}
 					/>
 					<Text style={{ color: '#4993d6', fontSize: 12, marginTop: 10 }}>
@@ -129,7 +163,7 @@ class QrCodeGeneratorScreen extends Component {
 					<Button
 						labelButton={'QR Code'}
 						buttonStyle={styles.actionButtonStyle}
-						onPress={() => this._handleOpenFullModal()}
+						onPress={() => this._generateQRCode(QRCodeValue)}
 					/>
 				</View>
 				{
