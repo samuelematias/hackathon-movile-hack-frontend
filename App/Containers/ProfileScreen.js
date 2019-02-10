@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
-import { ScrollView, Text, Image, View, TouchableOpacity } from 'react-native';
+import {
+	ScrollView,
+	Text,
+	Image,
+	View,
+	TouchableOpacity,
+	Platform
+} from 'react-native';
 import { Images, Colors } from '../Themes';
 import { StatusBarColor, Button } from '../Components/Common';
 
@@ -16,7 +23,7 @@ class ProfileScreen extends Component {
 				return (
 					<Image
 						style={styles.iconHeader}
-						source={Images.iconUserActive}
+						source={Images.iconProfileOn}
 						resizeMode={'contain'}
 					/>
 				);
@@ -24,19 +31,19 @@ class ProfileScreen extends Component {
 				return (
 					<Image
 						style={styles.iconHeader}
-						source={Images.iconUserInactive}
+						source={Images.iconProfileOff}
 						resizeMode={'contain'}
 					/>
 				);
 			}
 		},
 		tabBarLabel: ({ focused }) => (
-			<View style={styles.wrapperTabBarLabel}>
+			<View style={Platform.OS === 'ios' ? styles.wrapperTabBarLabel : {}}>
 				<Text
 					style={[
 						styles.label,
 						{
-							color: focused ? Colors.black : Colors.greyAccent
+							color: focused ? '#FFF' : 'rgba(255, 255, 255, 0.5)'
 						}
 					]}
 				>

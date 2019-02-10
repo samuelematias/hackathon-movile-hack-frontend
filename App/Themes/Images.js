@@ -16,7 +16,20 @@ const images = {
 	eye: require('../Images/Icons/eye.png'),
 	eyeOff: require('../Images/Icons/eye-off.png'),
 	clear: require('../Images/Icons/clear.png'),
-	opacityFrame: require('../Images/opacity-frame.png')
+	opacityFrame: require('../Images/opacity-frame.png'),
+	iconPlus: require('../Images/Icons/icon-plus.png'),
+	iconProfileOn: require('../Images/Icons/icon-profile-on.png'),
+	iconProfileOff: require('../Images/Icons/icon-profile-off.png'),
+	iconQrCodeOn: require('../Images/Icons/icon-qr-code-on.png'),
+	iconQrCodeOff: require('../Images/Icons/icon-qr-code-off.png'),
+	iconWallet: require('../Images/Icons/icon-wallet.png'),
+	iconArrowLeftBlue: require('../Images/Icons/icon-arrow-left-blue.png'),
+	iconArrowLeftGreen: require('../Images/Icons/icon-arrow-left-green.png'),
+	iconArrowLeftWhite: require('../Images/Icons/icon-arrow-left-white.png'),
+	iconCard: require('../Images/Icons/icon-card.png'),
+	iconHomeOn: require('../Images/Icons/icon-home-on.png'),
+	iconHomeOff: require('../Images/Icons/icon-home-off.png'),
+	iconMasterCard: require('../Images/Icons/icon-mastercard.png')
 };
 
 export default images;

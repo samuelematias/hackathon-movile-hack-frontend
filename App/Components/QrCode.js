@@ -1,22 +1,20 @@
 import React, { Component } from 'react';
 import {
-	ScrollView,
 	Text,
 	Image,
 	View,
 	TouchableOpacity,
 	StatusBar,
-	Dimensions,
-	Vibration,
 	Linking,
-	TouchableHighlight,
-	Alert
+	TouchableHighlight
 } from 'react-native';
 import PropTypes from 'prop-types';
 
 import { CameraKitCameraScreen } from 'react-native-camera-kit';
 
 import { Images } from '../Themes/';
+
+import { BottomModal } from '../Components/Common/';
 
 //styles
 import styles from './Styles/QrCodeStyles';
@@ -27,7 +25,8 @@ class QrCode extends Component {
 
 		this.state = {
 			qrvalue: '',
-			arrQrCodeData: []
+			arrQrCodeData: [],
+			openBottomModal: false
 		};
 	}
 
@@ -38,16 +37,16 @@ class QrCode extends Component {
 
 	_handleChooseQrCodeOption = () => {
 		const { qrvalue } = this.state;
-		if (!qrvalue) {
-			return this._renderReadQrCode();
-		} else {
-			return this._renderShowQrCodeInfo();
-		}
+		// if (!qrvalue) {
+		return this._renderReadQrCode();
+		// } else {
+		// return this._renderShowQrCodeInfo();
+		// }
 	};
 
 	_renderReadQrCode = () => {
+		const { openBottomModal } = this.state;
 		const { navigation } = this.props;
-		console.log('lol', navigation);
 		return (
 			<View
 				style={{
@@ -97,6 +96,16 @@ class QrCode extends Component {
 						/>
 					</TouchableOpacity>
 				</View>
+				{
+					<BottomModal
+						open={openBottomModal}
+						onPressOutside={() => this._handleCloseBottomModal()}
+						// modalContent={() => this._renderBottomModalContent()}
+						showButtonOnOverlay //Facebook Modal Style
+						// showButtonOnModal //LinkedIn Modal style
+						// roundCorner={10} //LinkedIn Modal style
+					/>
+				}
 			</View>
 		);
 	};
@@ -104,6 +113,29 @@ class QrCode extends Component {
 	onBarcodeScan = qrvalue => {
 		//called after te successful scanning of QRCode/Barcode
 		this.setState({ qrvalue: qrvalue });
+		this._handleOpenBottomModal();
+	};
+
+	/**
+	 * Handle to setState on openBottomModal state (to open the modal).
+	 * @author samuelmataraso
+	 * @method _handleOpenBottomModal
+	 * @param none
+	 * @return state
+	 */
+	_handleOpenBottomModal = () => {
+		this.setState({ openBottomModal: true });
+	};
+
+	/**
+	 * Handle to setState on openBottomModal state (to close the modal).
+	 * @author samuelmataraso
+	 * @method _handleCloseBottomModal
+	 * @param none
+	 * @return {state} state
+	 */
+	_handleCloseBottomModal = () => {
+		this.setState({ openBottomModal: false });
 	};
 
 	// /**
@@ -176,6 +208,7 @@ QrCode.defaultProps = {
 	 *funcProps: () => {},
 	 *numProps: 2,
 	 */
+	navigation: null
 };
 
 QrCode.propTypes = {
@@ -199,6 +232,11 @@ QrCode.propTypes = {
    *(used to images(url/images on project))
    *  imageType: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
    */
+	navigation: PropTypes.oneOfType([
+		PropTypes.object,
+		PropTypes.number,
+		PropTypes.array
+	])
 };
 
 export default QrCode;
