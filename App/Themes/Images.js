@@ -29,7 +29,10 @@ const images = {
 	iconCard: require('../Images/Icons/icon-card.png'),
 	iconHomeOn: require('../Images/Icons/icon-home-on.png'),
 	iconHomeOff: require('../Images/Icons/icon-home-off.png'),
-	iconMasterCard: require('../Images/Icons/icon-mastercard.png')
+	iconMasterCard: require('../Images/Icons/icon-mastercard.png'),
+	logo: require('../Images/react-redux-firebase-render.png'),
+	logoVendor: require('../Images/logo-vendedor.png'),
+	logoClient: require('../Images/logo-cliente.png')
 };
 
 export default images;
