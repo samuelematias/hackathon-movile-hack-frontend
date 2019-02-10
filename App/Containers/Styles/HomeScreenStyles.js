@@ -9,6 +9,10 @@ export default StyleSheet.create({
 		height: 20,
 		width: 20
 	},
+	label: {
+		textAlign: 'center',
+		fontSize: 10
+	},
 	wrapperTabBarLabel: {
 		marginTop: 15
 	},
