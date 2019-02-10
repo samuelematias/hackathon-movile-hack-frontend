@@ -7,7 +7,7 @@ import styles from './Styles/HomeScreenStyles';
 
 class HomeScreen extends Component {
 	static navigationOptions = ({ navigation }) => ({
-		headerTitle: <Text style={styles.headerLabelStyle}>{'HomeScreen'}</Text>,
+		header: null,
 		tabBarIcon: ({ focused }) => {
 			if (focused) {
 				return (
@@ -50,20 +50,28 @@ class HomeScreen extends Component {
 	}
 
 	render() {
+		const money = '120,00';
 		return (
 			<View style={styles.mainContainer}>
-				<Image
-					source={Images.background}
-					style={styles.backgroundImage}
-					resizeMode="stretch"
-				/>
-				<ScrollView style={styles.container}>
-					<View style={styles.centered}>
-						<Image source={Images.launch} style={styles.logo} />
+				<View style={styles.wrapperHeader}>
+					<View style={styles.wrapperInfo}>
+						<View>
+							<Text style={styles.avaiableMoneyTextStyle}>
+								{'Saldo disponível'}
+							</Text>
+						</View>
+						<View style={styles.wrapperMoney}>
+							<Text style={styles.moneyTextStyle}>{'R$ ' + money}</Text>
+						</View>
+						<View style={styles.wrapperWallet}>
+							<Image
+								source={Images.iconWallet}
+								style={styles.wallerStyle}
+								resizeMode="stretch"
+							/>
+						</View>
 					</View>
-
-					<View style={styles.section} />
-				</ScrollView>
+				</View>
 			</View>
 		);
 	}

@@ -249,6 +249,14 @@ const style = {
 	continuaTextStyle: {
 		fontFamily: type.avenir.medium,
 		fontSize: size.tiny
+	},
+	avaiableMoneyTextStyle: {
+		fontFamily: type.avenir.heavy,
+		fontSize: size.medium
+	},
+	moneyTextStyle: {
+		fontFamily: type.avenir.book,
+		fontSize: size.h5
 	}
 };
 

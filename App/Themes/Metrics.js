@@ -206,6 +206,26 @@ const metrics = {
 			marginTop: size(20),
 			marginLeft: size(20)
 		}
+	},
+	/**
+   HomeScreenMetrics
+   */
+	HomeScreenMetrics: {
+		wrapperHeader: {
+			height: size(140)
+		},
+		wrapperInfo: {
+			marginTop: size(36),
+			marginLeft: size(15)
+		},
+		wrapperMoney: {
+			marginTop: size(15)
+		},
+		wallerStyle: {
+			width: size(100),
+			height: size(100)
+		},
+		wrapperWallet: {}
 	}
 };
 

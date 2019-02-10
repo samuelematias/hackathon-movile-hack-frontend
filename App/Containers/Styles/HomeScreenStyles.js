@@ -1,41 +1,37 @@
 import { StyleSheet, Platform } from 'react-native';
-import { Metrics, ApplicationStyles } from '../../Themes/';
+import { Metrics, ApplicationStyles, Colors, Fonts } from '../../Themes/';
+
+const { HomeScreenMetrics } = Metrics;
 
 export default StyleSheet.create({
 	...ApplicationStyles.screen,
-	container: {
-		paddingBottom: Metrics.baseMargin
+	wrapperHeader: {
+		...HomeScreenMetrics.wrapperHeader,
+		backgroundColor: Colors.skinBlue
+		// flex: 1
 	},
-	logo: {
-		marginTop: Metrics.doubleSection,
-		height: Metrics.images.logo,
-		width: Metrics.images.logo,
-		resizeMode: 'contain'
+	wrapperInfo: {
+		...HomeScreenMetrics.wrapperInfo
 	},
-	centered: {
-		alignItems: 'center'
+	wrapperMoney: {
+		...HomeScreenMetrics.wrapperMoney,
+		flexDirection: 'row',
+		justifyContent: 'space-between'
 	},
-
-	iconHeader: {
-		height: 20,
-		width: 20
+	avaiableMoneyTextStyle: {
+		...Fonts.style.avaiableMoneyTextStyle,
+		color: Colors.darkBlue
 	},
-	wrapperTabBarLabel: {
-		marginTop: 15
+	moneyTextStyle: {
+		...Fonts.style.moneyTextStyle,
+		color: Colors.white
 	},
-	label: {
-		textAlign: 'center',
-		fontSize: 10
+	wallerStyle: {
+		...HomeScreenMetrics.wallerStyle
 	},
-	wrapperItem: {
-		flex: 1,
-		alignItems: 'flex-start',
-		justifyContent: 'flex-start',
-		margin: 16
-	},
-	headerLabelStyle: {
-		fontSize: 18,
-		fontWeight: 'bold',
-		color: '#fff'
+	wrapperWallet: {
+		...HomeScreenMetrics.wrapperWallet,
+		position: 'absolute',
+		right: 0
 	}
 });

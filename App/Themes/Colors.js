@@ -62,7 +62,8 @@ const colors = {
 	black_0_5: 'rgba(0, 0, 0, 0.5)',
 	blackout: '#000000',
 	skinBlack: '#2C3539',
-	skinBlue: '#4993d6'
+	skinBlue: '#4993d6',
+	darkBlue: '#07549a'
 	// deepSkyBlue: '#007aff'
 };
 
