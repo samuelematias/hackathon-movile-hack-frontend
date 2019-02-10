@@ -15,7 +15,8 @@ const images = {
 	iconLeading: require('../Images/Icons/leading-icon.png'),
 	eye: require('../Images/Icons/eye.png'),
 	eyeOff: require('../Images/Icons/eye-off.png'),
-	clear: require('../Images/Icons/clear.png')
+	clear: require('../Images/Icons/clear.png'),
+	opacityFrame: require('../Images/opacity-frame.png')
 };
 
 export default images;

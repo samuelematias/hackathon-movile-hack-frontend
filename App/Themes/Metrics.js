@@ -148,6 +148,64 @@ const metrics = {
 	signInFloatBackIcon: {
 		width: size(15),
 		height: size(13)
+	},
+	/**
+   QrCodeComponentMetrics
+   */
+	QrCodeComponentMetrics: {
+		containerReadQrCode: {
+			height: size(100),
+			paddingTop: size(20)
+		},
+		readQrCodeTitleStyle: {
+			paddingRight: size(20),
+			paddingLeft: size(20)
+		},
+		containerShowQrCodeInfo: {
+			marginTop: size(100),
+			height: ph(100),
+			width: pw(93)
+		},
+		wrapperShowQrdCodeInfoTitle: {
+			padding: size(10),
+			marginTop: size(30)
+		},
+		buttonOpenLink: {
+			marginTop: size(180),
+			padding: size(10)
+		},
+		buttonContinue: {
+			marginTop: size(10),
+			padding: size(10)
+		},
+		view1: {
+			top: ph(-15),
+			height: size(280)
+		},
+		view2: {
+			top: size(50),
+			height: size(200)
+		},
+		wrapperOpacityFrame: {
+			// height: ph(50),
+			// width: width
+		},
+		opacityFrameStyle: {
+			height: height,
+			width: width
+		},
+		wrapperHeaderTitle: {
+			width: width,
+			marginTop: size(60)
+		},
+		iconArrowLeftStyle: {
+			height: size(20),
+			width: size(20)
+		},
+		wrapperIconArrowLeft: {
+			marginTop: size(20),
+			marginLeft: size(20)
+		}
 	}
 };
 

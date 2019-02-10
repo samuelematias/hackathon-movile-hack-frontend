@@ -25,54 +25,7 @@ import styles from './Styles/WelcomeScreenStyles';
 
 class WelcomeScreen extends Component {
 	static navigationOptions = ({ navigation }) => ({
-		headerTitle: <Text style={styles.headerLabelStyle}>{'WelcomeScreen'}</Text>,
-		headerLeft: (
-			<TouchableOpacity
-				style={styles.wrapperHeaderLeft}
-				onPress={() => {
-					navigation.goBack();
-				}}
-			>
-				<Image
-					style={styles.iconHeader}
-					source={Images.iconArrowLeft}
-					resizeMode={'contain'}
-				/>
-			</TouchableOpacity>
-		),
-		tabBarIcon: ({ focused }) => {
-			if (focused) {
-				return (
-					<Image
-						style={styles.iconHeader}
-						source={Images.iconRadarActive}
-						resizeMode={'contain'}
-					/>
-				);
-			} else {
-				return (
-					<Image
-						style={styles.iconHeader}
-						source={Images.iconRadarInactive}
-						resizeMode={'contain'}
-					/>
-				);
-			}
-		},
-		tabBarLabel: ({ focused }) => (
-			<View style={styles.wrapperTabBarLabel}>
-				<Text
-					style={[
-						styles.label,
-						{
-							color: focused ? '#3F51B5' : '#404040'
-						}
-					]}
-				>
-					{'Launch'}
-				</Text>
-			</View>
-		)
+		header: null
 	});
 
 	constructor(props) {
@@ -84,7 +37,7 @@ class WelcomeScreen extends Component {
 	}
 
 	render() {
-		return <QrCode />;
+		return <QrCode navigation={this.props.navigation} />;
 	}
 }
 

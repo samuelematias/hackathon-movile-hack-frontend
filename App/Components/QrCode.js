@@ -16,6 +16,8 @@ import PropTypes from 'prop-types';
 
 import { CameraKitCameraScreen } from 'react-native-camera-kit';
 
+import { Images } from '../Themes/';
+
 //styles
 import styles from './Styles/QrCodeStyles';
 
@@ -44,22 +46,14 @@ class QrCode extends Component {
 	};
 
 	_renderReadQrCode = () => {
+		const { navigation } = this.props;
+		console.log('lol', navigation);
 		return (
-			<View style={{ flex: 1 }}>
-				<View
-					style={{ height: 100, backgroundColor: '#000000', paddingTop: 20 }}
-				>
-					<Text
-						style={{
-							color: '#FFFFFF',
-							fontSize: 32,
-							marginTop: 20,
-							marginLeft: 20
-						}}
-					>
-						QRCodeScannerExample
-					</Text>
-				</View>
+			<View
+				style={{
+					flex: 1
+				}}
+			>
 				<CameraKitCameraScreen
 					showFrame={false}
 					//Show/hide scan frame
@@ -75,6 +69,34 @@ class QrCode extends Component {
 						this.onBarcodeScan(event.nativeEvent.codeStringValue)
 					}
 				/>
+				<View style={styles.wrapperOpacityFrame}>
+					<Image
+						source={Images.opacityFrame}
+						style={styles.opacityFrameStyle}
+						// resizeMode="stretch"
+					/>
+				</View>
+				<View style={styles.wrapperHeaderTitle}>
+					<Text style={styles.readQrCodeTitleStyle}>
+						{
+							'Posicione o QR code dentro do quadrado e aguarde. /n A leitura é automática.'
+						}
+					</Text>
+				</View>
+				<View style={styles.containerIconArrowLeft}>
+					<TouchableOpacity
+						style={styles.wrapperIconArrowLeft}
+						onPress={() => {
+							navigation.goBack();
+						}}
+					>
+						<Image
+							source={Images.iconArrowLeft}
+							style={styles.iconArrowLeftStyle}
+							resizeMode={'contain'}
+						/>
+					</TouchableOpacity>
+				</View>
 			</View>
 		);
 	};
@@ -92,57 +114,36 @@ class QrCode extends Component {
 	//  * @return {func} render
 	//  */
 	_renderShowQrCodeInfo = () => {
-		const {} = this.props;
 		const {} = this.state;
 
 		return (
-			<View
-				style={{
-					backgroundColor: 'rgba(00, 00, 00 , 0.8)',
-					position: 'absolute',
-					marginTop: 100,
-					height: Dimensions.get('window').height - 100,
-					width: Dimensions.get('window').width
-				}}
-			>
-				<View style={{ alignSelf: 'center', padding: 10, marginTop: 30 }}>
-					<Text style={{ color: '#FFFFFF', fontSize: 24 }}>SCANNED</Text>
+			<View style={styles.containerShowQrCodeInfo}>
+				<View style={styles.wrapperShowQrdCodeInfoTitle}>
+					<Text style={styles.showQrCodeInforTitleStyle}>{'SCANNED'}</Text>
 				</View>
 				<View style={{ alignSelf: 'center' }}>
 					<Text
-						style={{ color: '#FFFFFF', fontSize: 18 }}
+						style={styles.qrValueTextStyle}
 						onPress={() => this.onOpenlink()}
 					>
-						QR Code:{' '}
+						{'QR Code: '}
 						<Text style={{ color: 'lightblue' }}>{this.state.qrvalue}</Text>
 					</Text>
 				</View>
 				<TouchableHighlight
 					onPress={() => this.onOpenlink()}
-					style={{
-						marginTop: 180,
-						alignSelf: 'center',
-						padding: 10,
-						backgroundColor: '#2C3539'
-					}}
+					style={styles.buttonOpenLink}
 				>
 					<View>
-						<Text style={{ color: '#FFFFFF', fontSize: 12 }}>Open Link</Text>
+						<Text style={styles.openLinkTextStyle}>{'Open Link'}</Text>
 					</View>
 				</TouchableHighlight>
 				<TouchableHighlight
 					onPress={() => this.onContinueScan()}
-					style={{
-						marginTop: 10,
-						alignSelf: 'center',
-						padding: 10,
-						backgroundColor: '#2C3539'
-					}}
+					style={styles.buttonContinue}
 				>
 					<View>
-						<Text style={{ color: '#FFFFFF', fontSize: 12 }}>
-							Continue Scanning
-						</Text>
+						<Text style={styles.continuaTextStyle}>{'Continue Scanning'}</Text>
 					</View>
 				</TouchableHighlight>
 			</View>
