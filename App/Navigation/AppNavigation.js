@@ -17,35 +17,36 @@ import ProfileScreen from '../Containers/ProfileScreen';
 
 const TabNav = TabNavigator(
 	{
-		LaunchScreenTab: {
-			screen: LaunchScreen
+		HomeScreenTab: {
+			screen: HomeScreen
 		},
-		ExampleScreenTab: {
-			screen: ExampleScreen
+		QrCodeGeneratorScreenTab: {
+			screen: QrCodeGeneratorScreen
 		},
-		AboutScreenTab: {
-			screen: AboutScreen
+		ProfileScreenTab: {
+			screen: ProfileScreen
 		}
 	},
 	{
 		tabBarPosition: 'bottom',
 		animationEnabled: false,
 		swipeEnabled: false,
-		initialRouteName: 'ExampleScreenTab',
+		initialRouteName: 'HomeScreenTab',
 		tabBarOptions: {
 			showLabel: true,
 			showIcon: true,
 			style: {
-				backgroundColor: '#fff'
+				backgroundColor: '#4993d6',
+				height: 47
 			},
 			tabStyle: {
 				borderTopWidth: 1,
-				borderTopColor: '#ececec',
+				borderTopColor: '#4993d6',
 				flex: 1
 			},
 			labelStyle: {
 				fontSize: 12,
-				color: '#c1c1c1',
+				color: 'red',
 				paddingBottom: 3
 			},
 			indicatorStyle: {

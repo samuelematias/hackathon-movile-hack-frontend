@@ -22,7 +22,14 @@ const images = {
 	iconProfileOff: require('../Images/Icons/icon-profile-off.png'),
 	iconQrCodeOn: require('../Images/Icons/icon-qr-code-on.png'),
 	iconQrCodeOff: require('../Images/Icons/icon-qr-code-off.png'),
-	iconWallet: require('../Images/Icons/icon-wallet.png')
+	iconWallet: require('../Images/Icons/icon-wallet.png'),
+	iconArrowLeftBlue: require('../Images/Icons/icon-arrow-left-blue.png'),
+	iconArrowLeftGreen: require('../Images/Icons/icon-arrow-left-green.png'),
+	iconArrowLeftWhite: require('../Images/Icons/icon-arrow-left-white.png'),
+	iconCard: require('../Images/Icons/icon-card.png'),
+	iconHomeOn: require('../Images/Icons/icon-home-on.png'),
+	iconHomeOff: require('../Images/Icons/icon-home-off.png'),
+	iconMasterCard: require('../Images/Icons/icon-mastercard.png')
 };
 
 export default images;
