@@ -261,6 +261,18 @@ const style = {
 	labelButtonStyle: {
 		fontFamily: type.avenir.medium,
 		fontSize: size.small
+	},
+	lastBuyTextStyle: {
+		fontFamily: type.avenir.heavy,
+		fontSize: size.regular
+	},
+	headerTitleStyle: {
+		fontFamily: type.avenir.book,
+		fontSize: size.tiny
+	},
+	listTextStyle: {
+		fontFamily: type.avenir.book,
+		fontSize: size.medium
 	}
 };
 

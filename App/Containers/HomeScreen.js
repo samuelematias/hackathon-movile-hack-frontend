@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
-import { TouchableOpacity, Text, Image, View, Platform } from 'react-native';
+import {
+	TouchableOpacity,
+	Text,
+	Image,
+	View,
+	Platform,
+	FlatList
+} from 'react-native';
 import { Images, Colors } from '../Themes';
 
 import { Button } from '../Components/Common/';
@@ -51,8 +58,97 @@ class HomeScreen extends Component {
 		this.state = {};
 	}
 
+	_renderList = () => {
+		const dataList = [
+			{
+				id: 1,
+				date: '08/01/19',
+				place: 'Renner',
+				money: '346,48'
+			},
+			{
+				id: 2,
+				date: '07/01/19',
+				place: 'Sympla',
+				money: '56,48'
+			},
+			{
+				id: 3,
+				date: '07/01/19',
+				place: 'iFood',
+				money: '500,00'
+			},
+			{
+				id: 4,
+				date: '08/01/19',
+				place: 'Cinemark',
+				money: '60,10'
+			}
+		];
+
+		return (
+			<FlatList
+				data={dataList}
+				extraData={this.state}
+				keyExtractor={this._keyExtractor}
+				renderItem={({ item, index }) => {
+					return this._renderItem(item);
+				}}
+				ListHeaderComponent={() => this._renderHeader()}
+				ItemSeparatorComponent={() => this._renderItemSeparator()}
+			/>
+		);
+	};
+
+	/**
+	 * key to Flatlist
+	 * @author samuelmataraso
+	 * @method _keyExtractor
+	 * @param {array} item
+	 * @param {number} index
+	 * @return {number} item.id
+	 */
+	_keyExtractor = (item, index) => item.id.toString();
+
+	_renderHeader = () => {
+		return (
+			<View style={styles.wrapperListHeader}>
+				<Text style={styles.headerTitleStyle}>{'DATA'}</Text>
+				<Text style={styles.headerTitleStyle}>{'ESTABELECIMENTO'}</Text>
+				<Text style={styles.headerTitleStyle}>{'VALOR'}</Text>
+			</View>
+		);
+	};
+
+	_renderItem = item => {
+		console.log('item lol', item);
+		return (
+			<View>
+				<View style={styles.wrapperListData}>
+					<Text style={styles.listTextStyle}>{item.date}</Text>
+					<Text style={styles.listTextStyle}>{item.place}</Text>
+					<Text
+						style={[
+							styles.listTextStyle,
+							{
+								textAlign: 'right'
+							}
+						]}
+					>
+						{item.money}
+					</Text>
+				</View>
+			</View>
+		);
+	};
+
+	_renderItemSeparator = () => {
+		return <View style={styles.line} />;
+	};
+
 	render() {
 		const money = '120,00';
+
 		return (
 			<View style={styles.mainContainer}>
 				<View style={styles.wrapperHeader}>
@@ -87,6 +183,10 @@ class HomeScreen extends Component {
 							<Text style={styles.labelButtonStyle}>{'Adicionar valor'}</Text>
 						</View>
 					</TouchableOpacity>
+				</View>
+				<View style={styles.wrapperList}>
+					<Text style={styles.lastBuyTextStyle}>{'Últimas compras'}</Text>
+					<View style={styles.listContent}>{this._renderList()}</View>
 				</View>
 			</View>
 		);

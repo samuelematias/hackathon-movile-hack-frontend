@@ -242,6 +242,22 @@ const metrics = {
 		},
 		wrapperIcon: {
 			marginRight: size(20)
+		},
+		wrapperList: {
+			margin: size(20)
+		},
+		listContent: {
+			marginTop: size(12)
+		},
+		wrapperListHeader: {
+			// marginBottom: size(180)
+		},
+		line: {
+			height: size(1)
+		},
+		wrapperListData: {
+			marginBottom: size(8),
+			marginTop: size(8)
 		}
 	}
 };

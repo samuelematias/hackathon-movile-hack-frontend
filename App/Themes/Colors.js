@@ -64,7 +64,8 @@ const colors = {
 	skinBlack: '#2C3539',
 	skinBlue: '#4993d6',
 	darkBlue: '#07549a',
-	lightBlack: '#464646'
+	lightBlack: '#464646',
+	solidGray: '#a1a1a1'
 	// deepSkyBlue: '#007aff'
 };
 

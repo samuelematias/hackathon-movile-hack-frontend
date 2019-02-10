@@ -65,5 +65,43 @@ export default StyleSheet.create({
 	},
 	wrapperIcon: {
 		...HomeScreenMetrics.wrapperIcon
+	},
+	wrapperList: {
+		...HomeScreenMetrics.wrapperList
+	},
+	lastBuyTextStyle: {
+		...Fonts.style.lastBuyTextStyle,
+		color: Colors.skinBlue
+	},
+	listContent: {
+		...HomeScreenMetrics.listContent
+	},
+	wrapperListHeader: {
+		...HomeScreenMetrics.wrapperListHeader,
+		flex: 1,
+		justifyContent: 'space-between',
+		flexDirection: 'row'
+	},
+	line: {
+		...HomeScreenMetrics.line,
+		backgroundColor: Colors.solidGray,
+		flex: 1
+	},
+	wrapperListData: {
+		...HomeScreenMetrics.wrapperListData,
+		flex: 1,
+		justifyContent: 'space-between',
+		flexDirection: 'row',
+		alignItems: 'center'
+	},
+	headerTitleStyle: {
+		...Fonts.style.headerTitleStyle,
+		color: Colors.solidGray
+	},
+	listTextStyle: {
+		...Fonts.style.listTextStyle,
+		color: Colors.skinBlack,
+		textAlign: 'left',
+		flex: 1
 	}
 });
