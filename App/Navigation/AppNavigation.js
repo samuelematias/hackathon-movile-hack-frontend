@@ -66,7 +66,7 @@ const AppNavigation = StackNavigator(
 	},
 	{
 		headerMode: Platform.OS === 'ios' ? 'float' : 'screen',
-		initialRouteName: 'TabRoot',
+		initialRouteName: 'Login',
 		/* The header config from HomeScreen is now here */
 		navigationOptions: {
 			headerStyle: {
