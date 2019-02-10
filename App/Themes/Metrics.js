@@ -259,6 +259,59 @@ const metrics = {
 			marginBottom: size(8),
 			marginTop: size(8)
 		}
+	},
+	/**
+   ProfileScreenMetrics
+   */
+	ProfileScreenMetrics: {
+		wrapperHeader: {
+			height: size(140)
+		},
+		wrapperInfo: {
+			marginTop: size(36),
+			marginLeft: size(15)
+		},
+		wrapperMoney: {
+			marginTop: size(15)
+		},
+		wallerStyle: {
+			width: size(100),
+			height: size(100)
+		},
+		wrapperWallet: {},
+		wrapperButton: {
+			marginTop: size(10),
+			height: ph(20)
+		},
+		buttonStyle: {
+			height: size(40),
+			borderWidth: size(2),
+			borderRadius: size(5),
+			width: 150
+		},
+		iconMoney: {
+			height: size(35),
+			width: size(35)
+		},
+		wrapperIcon: {
+			marginRight: size(20)
+		},
+		wrapperList: {
+			margin: size(20)
+		},
+		listContent: {
+			marginTop: size(12)
+		},
+		wrapperListHeader: {
+			// marginBottom: size(180)
+		},
+		line: {
+			height: size(1)
+		},
+		wrapperListData: {
+			marginBottom: size(8),
+			marginTop: size(8)
+		}
 	}
 };
 

@@ -1,6 +1,8 @@
 import { StyleSheet, Platform } from 'react-native';
 import { Metrics, ApplicationStyles, Fonts, Colors } from '../../Themes/';
 
+const { ProfileScreenMetrics } = Metrics;
+
 export default StyleSheet.create({
 	...ApplicationStyles.screen,
 	container: {
@@ -37,8 +39,10 @@ export default StyleSheet.create({
 		color: Colors.lightBlack
 	},
 	logoutContent: {
-		alignItems: 'center',
-		marginTop: 10
+		flex: 1,
+		// alignItems: 'center',
+		// marginTop: 10,
+		backgroundColor: 'red'
 	},
 	centered: {
 		alignItems: 'center'
@@ -70,5 +74,31 @@ export default StyleSheet.create({
 	labelButtonStyle: {
 		...Fonts.style.labelButtonStyle,
 		color: Colors.lightBlack
+	},
+	wrapperButton: {
+		...ProfileScreenMetrics.wrapperButton,
+		alignItems: 'center',
+		justifyContent: 'flex-end'
+	},
+	buttonStyle: {
+		...ProfileScreenMetrics.buttonStyle,
+		backgroundColor: Colors.white,
+		borderColor: Colors.skinBlue,
+		alignItems: 'center',
+		justifyContent: 'center'
+	},
+	labelButtonStyle: {
+		...Fonts.style.labelButtonStyle,
+		color: Colors.lightBlack
+	},
+	iconMoney: {
+		...ProfileScreenMetrics.iconMoney
+	},
+	wrapperLabel: {
+		alignItems: 'center',
+		justifyContent: 'center'
+	},
+	wrapperIcon: {
+		...ProfileScreenMetrics.wrapperIcon
 	}
 });
