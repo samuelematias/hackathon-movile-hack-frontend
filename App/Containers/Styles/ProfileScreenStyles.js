@@ -22,10 +22,11 @@ export default StyleSheet.create({
 		height: 250
 	},
 	bodyContent: {
-		flex: 1,
-		alignItems: 'flex-start',
+		// flex: 1,
+		// alignItems: 'flex-start',
 		padding: 20,
 		marginTop: 10
+		// backgroundColor: 'red'
 	},
 	nameContent: {
 		fontSize: 28,
@@ -39,7 +40,7 @@ export default StyleSheet.create({
 	},
 	logoutContent: {
 		alignItems: 'center',
-		marginTop: 120
+		marginTop: 10
 	},
 	centered: {
 		alignItems: 'center'

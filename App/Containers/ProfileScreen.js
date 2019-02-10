@@ -91,16 +91,16 @@ class ProfileScreen extends Component {
 						<Text style={styles.emailContent}>{user.email}</Text>
 						<Text style={styles.emailContent}>{user.phone}</Text>
 						<Text style={styles.emailContent}>{user.address}</Text>
-					</View>
-					<View style={styles.logoutContent}>
-						<Button
-							labelButton={'Logout'}
-							labelButtonStyle={styles.labelButtonStyle}
-							buttonStyle={styles.actionButtonStyle}
-							onPress={() => {
-								navigation.navigate('Login');
-							}}
-						/>
+						<View style={styles.logoutContent}>
+							<Button
+								labelButton={'Logout'}
+								labelButtonStyle={styles.labelButtonStyle}
+								buttonStyle={styles.actionButtonStyle}
+								onPress={() => {
+									navigation.navigate('Login');
+								}}
+							/>
+						</View>
 					</View>
 				</View>
 			</View>
