@@ -5,7 +5,9 @@ import {
 	Image,
 	View,
 	Platform,
-	TextInput
+	TextInput,
+	Keyboard,
+	KeyboardAvoidingView
 } from 'react-native';
 import { Images, Colors } from '../Themes';
 import { Button, FullModal } from '../Components/Common/';
@@ -16,6 +18,9 @@ import styles from './Styles/QrCodeGeneratorScreenStyles';
 class QrCodeGeneratorScreen extends Component {
 	static navigationOptions = ({ navigation }) => ({
 		header: null,
+		tabBarVisible: navigation.state.params
+			? navigation.state.params.tabBarVisible
+			: true,
 		tabBarIcon: ({ focused }) => {
 			if (focused) {
 				return (
@@ -56,9 +61,47 @@ class QrCodeGeneratorScreen extends Component {
 
 		this.state = {
 			QRCodeValue: '',
-			openFullModal: false
+			openFullModal: false,
+			hideButton: false
 		};
 	}
+
+	componentDidMount() {
+		if (Platform.OS === 'android') {
+			//Listener to handle when the keyboard will show, to hide the TabBar
+			this.keyboardDidShowListener = Keyboard.addListener(
+				'keyboardDidShow',
+				this.keyboardWillShow
+			);
+
+			//Listener to handle when the keyboard will hide, to show the TabBar
+			this.keyboardDidHideListener = Keyboard.addListener(
+				'keyboardDidHide',
+				this.keyboardWillHide
+			);
+		}
+	}
+
+	keyboardWillShow = () => {
+		this._handleShowTabBar(false);
+		this.setState({
+			hideButton: true
+		});
+	};
+
+	keyboardWillHide = () => {
+		this._handleShowTabBar(true);
+		this.setState({
+			hideButton: false
+		});
+	};
+
+	_handleShowTabBar = boolean => {
+		const { navigation } = this.props;
+		navigation.setParams({
+			tabBarVisible: boolean
+		});
+	};
 
 	_onChangeText = text => {
 		this.setState({ QRCodeValue: text });
@@ -69,21 +112,21 @@ class QrCodeGeneratorScreen extends Component {
 	};
 
 	_handleCloseFullModal = () => {
-		this.setState({ openFullModal: false });
+		this.setState({ openFullModal: false, QRCodeValue: '' });
 	};
 
 	_renderFullModalContent = () => {
 		return (
 			<View style={styles.wrapperModal}>
-				<View style={{ alignItems: 'center', justifyContent: 'center' }}>
+				<View style={styles.wrapperQrCode}>
 					<Image
-						style={{ width: 200, height: 200 }}
+						style={styles.QrCodeStyle}
 						source={{
 							uri:
 								'http://ec2-3-90-10-228.compute-1.amazonaws.com:8000/media/4febddff762e46f79ec575f89869af64.png'
 						}}
 					/>
-					<Text style={{ color: '#4993d6', fontSize: 12, marginTop: 10 }}>
+					<Text style={styles.aboutQrCodeTextStyle}>
 						Seu QR Code está pronto para ser escaniado!
 					</Text>
 				</View>
@@ -98,15 +141,44 @@ class QrCodeGeneratorScreen extends Component {
 		);
 	};
 
+	_handleAndroid = () => {
+		const { hideButton, QRCodeValue } = this.state;
+		return (
+			<View style={styles.gerarCodeContent}>
+				{!hideButton ? (
+					<Button
+						labelButton={'QR Code'}
+						labelButtonStyle={styles.QrCodeButtom}
+						buttonStyle={styles.actionButtonStyle}
+						onPress={() => this._handleOpenFullModal()}
+						enabledButton={QRCodeValue && QRCodeValue.length > 0 ? true : false}
+					/>
+				) : null}
+			</View>
+		);
+	};
+
 	render() {
 		const { openFullModal, QRCodeValue } = this.state;
+		const money = '120,00';
 		return (
 			<View style={styles.mainContainer}>
-				<View>
-					<View style={styles.headerContent}>
-						<View sytle={styles.saldoContent}>
-							<Text style={styles.TextSaldoDisponivel}>Saldo disponível</Text>
-							<Text style={styles.TextSaldoValor}>R$ 700,00</Text>
+				<View style={styles.wrapperHeader}>
+					<View style={styles.wrapperInfo}>
+						<View>
+							<Text style={styles.avaiableMoneyTextStyle}>
+								{'Saldo disponível'}
+							</Text>
+						</View>
+						<View style={styles.wrapperMoney}>
+							<Text style={styles.moneyTextStyle}>{'R$ ' + money}</Text>
+						</View>
+						<View style={styles.wrapperWallet}>
+							<Image
+								source={Images.iconWallet}
+								style={styles.wallerStyle}
+								resizeMode="stretch"
+							/>
 						</View>
 					</View>
 				</View>
@@ -118,20 +190,32 @@ class QrCodeGeneratorScreen extends Component {
 							<TextInput
 								style={styles.qrCodeInputField}
 								onChangeText={text => this._onChangeText(text)}
-								placeholder={'10,00'}
-								placeholderTextColor={'#4993d6'}
+								placeholder={'00,00'}
+								placeholderTextColor={Colors.lightGray}
 								value={QRCodeValue}
+								keyboardType={'numeric'}
 							/>
 						</View>
 					</View>
 				</View>
-				<View style={styles.gerarCodeContent}>
-					<Button
-						labelButton={'QR Code'}
-						buttonStyle={styles.actionButtonStyle}
-						onPress={() => this._handleOpenFullModal()}
-					/>
-				</View>
+				{Platform.OS === 'ios' ? (
+					<KeyboardAvoidingView
+						behavior="padding"
+						style={styles.gerarCodeContent}
+					>
+						<Button
+							labelButton={'QR Code'}
+							labelButtonStyle={styles.QrCodeButtom}
+							buttonStyle={styles.actionButtonStyle}
+							onPress={() => this._handleOpenFullModal()}
+							enabledButton={
+								QRCodeValue && QRCodeValue.length > 0 ? true : false
+							}
+						/>
+					</KeyboardAvoidingView>
+				) : (
+					this._handleAndroid()
+				)}
 				{
 					<FullModal
 						open={openFullModal}

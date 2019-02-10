@@ -1,5 +1,13 @@
 import { StyleSheet } from 'react-native';
-import { Metrics, ApplicationStyles, CustomFonts, Colors } from '../../Themes/';
+import {
+	Metrics,
+	ApplicationStyles,
+	CustomFonts,
+	Colors,
+	Fonts
+} from '../../Themes/';
+
+const { QrCodeGeneratorScreenMetrics } = Metrics;
 
 export default StyleSheet.create({
 	...ApplicationStyles.screen,
@@ -47,9 +55,8 @@ export default StyleSheet.create({
 		marginLeft: 16
 	},
 	qrCodeText: {
-		color: '#464646',
-		fontSize: 18,
-		fontWeight: 'bold'
+		...Fonts.style.qrCodeText,
+		color: Colors.skinBlack
 	},
 	qrCodeInputContent: {
 		flexDirection: 'row',
@@ -63,15 +70,20 @@ export default StyleSheet.create({
 		color: '#4993d6'
 	},
 	qrCodeInputField: {
-		height: 100,
-		color: '#4993d6',
-		fontSize: 60,
-		marginRight: 2
+		// height: 100,
+		flex: 1,
+		color: Colors.skinBlue,
+		fontSize: 50
+		// marginRight: 2,
+		// backgroundColor: 'red'
 	},
 	gerarCodeContent: {
-		marginTop: 56,
-		alignItems: 'center',
-		justifyContent: 'center'
+		bottom: 0,
+		right: 0,
+		left: 0,
+		position: 'absolute',
+		flex: 1,
+		alignItems: 'center'
 	},
 	actionButtonStyle: {
 		backgroundColor: '#4993d6'
@@ -89,5 +101,51 @@ export default StyleSheet.create({
 		...CustomFonts.style.h1,
 		color: Colors.grayAccent,
 		textAlign: 'center'
+	},
+	wrapperHeader: {
+		...QrCodeGeneratorScreenMetrics.wrapperHeader,
+		backgroundColor: Colors.skinBlue
+		// flex: 1
+	},
+	wrapperInfo: {
+		...QrCodeGeneratorScreenMetrics.wrapperInfo
+	},
+	wrapperMoney: {
+		...QrCodeGeneratorScreenMetrics.wrapperMoney,
+		flexDirection: 'row',
+		justifyContent: 'space-between'
+	},
+	avaiableMoneyTextStyle: {
+		...Fonts.style.avaiableMoneyTextStyle,
+		color: Colors.darkBlue
+	},
+	moneyTextStyle: {
+		...Fonts.style.moneyTextStyle,
+		color: Colors.white
+	},
+	wallerStyle: {
+		...QrCodeGeneratorScreenMetrics.wallerStyle
+	},
+	wrapperWallet: {
+		...QrCodeGeneratorScreenMetrics.wrapperWallet,
+		position: 'absolute',
+		right: 0
+	},
+	wrapperQrCode: {
+		alignItems: 'center',
+		justifyContent: 'center'
+	},
+	QrCodeStyle: {
+		width: 200,
+		height: 200
+	},
+	aboutQrCodeTextStyle: {
+		color: '#4993d6',
+		fontSize: 12,
+		marginTop: 10
+	},
+	QrCodeButtom: {
+		...Fonts.style.QrCodeButtom,
+		color: Colors.white
 	}
 });

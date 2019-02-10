@@ -33,7 +33,8 @@ const images = {
 	logo: require('../Images/react-redux-firebase-render.png'),
 	logoVendor: require('../Images/logo-vendedor.png'),
 	logoClient: require('../Images/logo-cliente.png'),
-	iconMoney: require('../Images/Icons/icon-money.png')
+	iconMoney: require('../Images/Icons/icon-money.png'),
+	avatar: require('../Images/avatar.png')
 };
 
 export default images;

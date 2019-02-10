@@ -77,8 +77,12 @@ export default StyleSheet.create({
 	},
 	wrapperButton: {
 		...ProfileScreenMetrics.wrapperButton,
-		alignItems: 'center',
-		justifyContent: 'flex-end'
+		bottom: 10,
+		right: 0,
+		left: 0,
+		position: 'absolute',
+		flex: 1,
+		alignItems: 'center'
 	},
 	buttonStyle: {
 		...ProfileScreenMetrics.buttonStyle,

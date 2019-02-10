@@ -281,6 +281,14 @@ const style = {
 	aboutContent: {
 		fontFamily: type.avenir.book,
 		fontSize: size.regular
+	},
+	qrCodeText: {
+		fontFamily: type.avenir.heavy,
+		fontSize: size.regular
+	},
+	QrCodeButtom: {
+		fontFamily: type.avenir.heavy,
+		fontSize: size.medium
 	}
 };
 

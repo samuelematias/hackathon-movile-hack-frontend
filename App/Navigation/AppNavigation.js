@@ -31,7 +31,7 @@ const TabNav = TabNavigator(
 		tabBarPosition: 'bottom',
 		animationEnabled: false,
 		swipeEnabled: false,
-		initialRouteName: 'ProfileScreenTab',
+		initialRouteName: 'QrCodeGeneratorScreenTab',
 		tabBarOptions: {
 			showLabel: true,
 			showIcon: true,
