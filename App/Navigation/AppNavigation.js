@@ -11,6 +11,10 @@ import AboutScreen from '../Containers/AboutScreen';
 import WelcomeScreen from '../Containers/WelcomeScreen';
 import InputScreen from '../Containers/InputScreen';
 
+import HomeScreen from '../Containers/HomeScreen';
+import QrCodeGeneratorScreen from '../Containers/QrCodeGeneratorScreen';
+import ProfileScreen from '../Containers/ProfileScreen';
+
 const TabNav = TabNavigator(
 	{
 		LaunchScreenTab: {
