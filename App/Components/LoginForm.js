@@ -6,7 +6,8 @@ import {
 	TouchableOpacity,
 	KeyboardAvoidingView,
 	Keyboard,
-	Platform
+	Platform,
+	SafeAreaView
 } from 'react-native';
 
 import { TextField } from 'react-native-material-textfield';

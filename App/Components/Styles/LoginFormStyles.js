@@ -16,7 +16,8 @@ export default StyleSheet.create({
 	},
 	buttonContainer: {
 		backgroundColor: '#4993d6',
-		paddingVertical: 15
+		paddingVertical: 15,
+		marginBottom: Platform.OS === 'ios' ? 10 : 0
 	},
 	buttonText: {
 		color: '#fff',

@@ -8,6 +8,7 @@ import BottomModal from './BottomModal';
 import CenterModal from './CenterModal';
 import FullModal from './FullModal';
 import Icon from './Icon';
+import StatusBarColor from './StatusBarColor';
 
 export {
 	Button,
@@ -19,5 +20,6 @@ export {
 	BottomModal,
 	CenterModal,
 	FullModal,
-	Icon
+	Icon,
+	StatusBarColor
 };

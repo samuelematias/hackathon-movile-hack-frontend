@@ -88,25 +88,25 @@ class HomeScreen extends Component {
 			{
 				id: 1,
 				date: '08/01/19',
-				place: 'Renner',
+				place: 'Roupas',
 				money: '346,48'
 			},
 			{
 				id: 2,
 				date: '07/01/19',
-				place: 'Sympla',
+				place: 'Restaurante',
 				money: '56,48'
 			},
 			{
 				id: 3,
 				date: '07/01/19',
-				place: 'iFood',
+				place: 'Perfurmaria',
 				money: '500,00'
 			},
 			{
 				id: 4,
 				date: '08/01/19',
-				place: 'Cinemark',
+				place: 'Cinema',
 				money: '60,10'
 			}
 		];
