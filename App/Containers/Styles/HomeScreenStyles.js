@@ -5,6 +5,13 @@ const { HomeScreenMetrics } = Metrics;
 
 export default StyleSheet.create({
 	...ApplicationStyles.screen,
+	iconHeader: {
+		height: 20,
+		width: 20
+	},
+	wrapperTabBarLabel: {
+		marginTop: 15
+	},
 	wrapperHeader: {
 		...HomeScreenMetrics.wrapperHeader,
 		backgroundColor: Colors.skinBlue
