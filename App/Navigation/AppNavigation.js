@@ -31,7 +31,7 @@ const TabNav = TabNavigator(
 		tabBarPosition: 'bottom',
 		animationEnabled: false,
 		swipeEnabled: false,
-		initialRouteName: 'QrCodeGeneratorScreenTab',
+		initialRouteName: 'HomeScreenTab',
 		tabBarOptions: {
 			showLabel: true,
 			showIcon: true,
@@ -65,7 +65,7 @@ const AppNavigation = StackNavigator(
 	},
 	{
 		headerMode: Platform.OS === 'ios' ? 'float' : 'screen',
-		initialRouteName: 'TabRoot',
+		initialRouteName: 'Login',
 		/* The header config from HomeScreen is now here */
 		navigationOptions: {
 			headerStyle: {
