@@ -88,19 +88,21 @@ class ProfileScreen extends Component {
 					<Image source={{ uri: user.photo }} style={styles.avatarContent} />
 					<View style={styles.bodyContent}>
 						<Text style={styles.nameContent}>{user.name}</Text>
-						<Text style={styles.emailContent}>{user.email}</Text>
-						<Text style={styles.emailContent}>{user.phone}</Text>
-						<Text style={styles.emailContent}>{user.address}</Text>
-					</View>
-					<View style={styles.logoutContent}>
-						<Button
-							labelButton={'Logout'}
-							labelButtonStyle={styles.labelButtonStyle}
-							buttonStyle={styles.actionButtonStyle}
-							onPress={() => {
-								navigation.navigate('Login');
-							}}
-						/>
+						<Text style={styles.aboutContent}>{user.email}</Text>
+						<Text style={styles.aboutContent}>{user.phone}</Text>
+						<Text style={styles.aboutContent}>{user.address}</Text>
+						<View style={styles.wrapperButton}>
+							<TouchableOpacity
+								style={styles.buttonStyle}
+								onPress={() => {
+									navigation.navigate('Login');
+								}}
+							>
+								<View style={styles.wrapperLabel}>
+									<Text style={styles.labelButtonStyle}>{'Logout'}</Text>
+								</View>
+							</TouchableOpacity>
+						</View>
 					</View>
 				</View>
 			</View>

@@ -273,6 +273,14 @@ const style = {
 	listTextStyle: {
 		fontFamily: type.avenir.book,
 		fontSize: size.medium
+	},
+	nameContent: {
+		fontFamily: type.avenir.heavy,
+		fontSize: size.h5
+	},
+	aboutContent: {
+		fontFamily: type.avenir.book,
+		fontSize: size.regular
 	}
 };
 

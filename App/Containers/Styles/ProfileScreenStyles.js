@@ -1,5 +1,7 @@
 import { StyleSheet, Platform } from 'react-native';
-import { Metrics, ApplicationStyles, Colors } from '../../Themes/';
+import { Metrics, ApplicationStyles, Fonts, Colors } from '../../Themes/';
+
+const { ProfileScreenMetrics } = Metrics;
 
 export default StyleSheet.create({
 	...ApplicationStyles.screen,
@@ -22,24 +24,25 @@ export default StyleSheet.create({
 		height: 250
 	},
 	bodyContent: {
-		flex: 1,
-		alignItems: 'flex-start',
+		// flex: 1,
+		// alignItems: 'flex-start',
 		padding: 20,
 		marginTop: 10
+		// backgroundColor: 'red'
 	},
 	nameContent: {
-		fontSize: 28,
-		color: '#696969',
-		fontWeight: '600'
+		...Fonts.style.nameContent,
+		color: Colors.skinBlack
 	},
-	emailContent: {
-		fontSize: 16,
-		color: '#696969',
-		marginTop: 10
+	aboutContent: {
+		...Fonts.style.aboutContent,
+		color: Colors.lightBlack
 	},
 	logoutContent: {
-		alignItems: 'center',
-		marginTop: 120
+		flex: 1,
+		// alignItems: 'center',
+		// marginTop: 10,
+		backgroundColor: 'red'
 	},
 	centered: {
 		alignItems: 'center'
@@ -61,14 +64,41 @@ export default StyleSheet.create({
 		borderColor: '#4993d6',
 		borderWidth: 2
 	},
-	labelButtonStyle: {
-		color: '#464646'
-	},
 	label: {
 		textAlign: 'center',
 		fontSize: 10
 	},
 	wrapperTabBarLabel: {
 		marginTop: Platform.OS === 'ios' ? 15 : 0
+	},
+	labelButtonStyle: {
+		...Fonts.style.labelButtonStyle,
+		color: Colors.lightBlack
+	},
+	wrapperButton: {
+		...ProfileScreenMetrics.wrapperButton,
+		alignItems: 'center',
+		justifyContent: 'flex-end'
+	},
+	buttonStyle: {
+		...ProfileScreenMetrics.buttonStyle,
+		backgroundColor: Colors.white,
+		borderColor: Colors.skinBlue,
+		alignItems: 'center',
+		justifyContent: 'center'
+	},
+	labelButtonStyle: {
+		...Fonts.style.labelButtonStyle,
+		color: Colors.lightBlack
+	},
+	iconMoney: {
+		...ProfileScreenMetrics.iconMoney
+	},
+	wrapperLabel: {
+		alignItems: 'center',
+		justifyContent: 'center'
+	},
+	wrapperIcon: {
+		...ProfileScreenMetrics.wrapperIcon
 	}
 });
